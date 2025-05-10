@@ -1,0 +1,80 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nombre": "Nicolás Vera",
+      "email": "nicolas@example.com",
+      "password": "123456",
+      "edad": 19,
+      "caminoSeleccionado": 1
+    }
+  ],
+  "fitnessPaths": [
+    {
+      "id": 1,
+      "nombre": "Musculación",
+      "descripcion": "Enfocado en ganar masa muscular",
+      "imagen": "musculacion.png"
+    },
+    {
+      "id": 2,
+      "nombre": "Agilidad",
+      "descripcion": "Mejora tu velocidad y coordinación",
+      "imagen": "agilidad.png"
+    },
+    {
+      "id": 3,
+      "nombre": "Yoga",
+      "descripcion": "Flexibilidad, balance y enfoque",
+      "imagen": "yoga.png"
+    }
+  ],
+  "rutinas": [
+    {
+      "id": 1,
+      "userId": 1,
+      "dia": "Lunes",
+      "ejercicios": [
+        { "nombre": "Sentadillas", "repeticiones": "3x10" },
+        { "nombre": "Press banca", "repeticiones": "3x8" }
+      ]
+    }
+  ],
+  "progresos": [
+    {
+      "userId": 1,
+      "semana": 1,
+      "nivel": 1,
+      "porcentajeCompletado": 25
+    }
+  ],
+  "planesNutricionales": [
+    {
+      "id": 1,
+      "userId": 1,
+      "dia": "Lunes",
+      "comidas": [
+        { "tipo": "Desayuno", "descripcion": "Avena con plátano" },
+        { "tipo": "Almuerzo", "descripcion": "Pechuga de pollo con arroz integral" },
+        { "tipo": "Cena", "descripcion": "Ensalada con atún" }
+      ]
+    }
+  ],
+  "avatares": [
+    {
+      "userId": 1,
+      "nivel": 1,
+      "estadoAnimo": "Motivado",
+      "imagen": "avatar1.png"
+    }
+  ],
+  "mensajesMotivacionales": [
+    { "id": 1, "texto": "¡Sigue así, estás rompiéndola!" },
+    { "id": 2, "texto": "Recuerda por qué comenzaste." }
+  ],
+  "retos": [
+    { "id": 1, "descripcion": "Haz 50 sentadillas hoy", "nivelDificultad": "Intermedio" },
+    { "id": 2, "descripcion": "Toma 2L de agua durante el día", "nivelDificultad": "Fácil" }
+  ]
+}
+
