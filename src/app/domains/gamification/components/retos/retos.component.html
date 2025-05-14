@@ -1,0 +1,14 @@
+<div class="retos-wrapper" *ngIf="retoActual">
+  <h2 class="titulo">Reto del Día 💪</h2>
+
+  <mat-card class="reto-card">
+    <p><strong>Descripción:</strong> {{ retoActual.descripcion }}</p>
+    <p><strong>Dificultad:</strong> {{ retoActual.nivelDificultad }}</p>
+
+    <button mat-stroked-button color="primary" (click)="seleccionarRetoAleatorio()">
+      Obtener otro reto
+    </button>
+  </mat-card>
+
+  <app-bottom-navbar></app-bottom-navbar>
+</div>
