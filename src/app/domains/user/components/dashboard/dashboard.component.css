@@ -1,0 +1,78 @@
+.dashboard-wrapper {
+  padding: 1rem;
+  background-color: #f4e9e6;
+  border-radius: 0; /* antes era 12px */
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-sizing: border-box;
+  min-height: 100vh; /* Para que no se quede corto */
+}
+
+
+/* Gráfico responsivo */
+.main-card {
+  padding: 1rem;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.main-card ngx-charts-line-chart {
+  width: 100% !important;
+  display: block;
+}
+
+/* Tarjetas justo debajo del gráfico */
+.side-cards {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.streak-card,
+.challenge-card {
+  flex: 1 1 48%;
+}
+
+/* Sección inferior */
+.bottom-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.avatar-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Responsive: ajustar espaciado en móvil */
+@media (max-width: 768px) {
+  .side-cards {
+    flex-direction: column;
+  }
+
+  .bottom-section {
+    grid-template-columns: 1fr;
+  }
+
+  .main-card ngx-charts-line-chart {
+    height: auto;
+  }
+}
