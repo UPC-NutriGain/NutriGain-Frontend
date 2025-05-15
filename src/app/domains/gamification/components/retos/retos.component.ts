@@ -19,7 +19,7 @@ export class RetosComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get<any[]>(`http://localhost:3000/retos`)
+    this.http.get<any[]>(`https://fake-api-murex-one.vercel.app/retos`)
       .subscribe(data => {
         this.retos = data;
         this.seleccionarRetoAleatorio();

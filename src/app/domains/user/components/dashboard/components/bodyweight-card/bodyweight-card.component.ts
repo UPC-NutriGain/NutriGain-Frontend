@@ -28,7 +28,7 @@ export class BodyweightCardComponent implements OnInit {
     this.setResponsiveView(); // ajusta tamaño desde el inicio
 
     const userId = 1;
-    this.http.get<any[]>(`http://localhost:3000/pesos?userId=${userId}`).subscribe(pesos => {
+    this.http.get<any[]>(`https://fake-api-murex-one.vercel.app/pesos?userId=${userId}`).subscribe(pesos => {
       if (pesos?.length) {
         this.data = [{
           name: 'Peso',

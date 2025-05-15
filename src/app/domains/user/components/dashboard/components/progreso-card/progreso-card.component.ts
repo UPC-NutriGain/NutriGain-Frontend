@@ -19,7 +19,7 @@ export class ProgresoCardComponent implements OnInit {
   ngOnInit(): void {
     const userId = 1;
 
-    this.http.get<any[]>(`http://localhost:3000/progresos?userId=${userId}`)
+    this.http.get<any[]>(`https://fake-api-murex-one.vercel.app/progresos?userId=${userId}`)
       .subscribe(data => {
         const ultimo = data[data.length - 1];
         this.progreso = ultimo?.porcentajeCompletado || 0;

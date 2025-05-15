@@ -22,21 +22,21 @@ export class ResumenComponent implements OnInit {
   ngOnInit(): void {
     const userId = 1;
 
-    this.http.get<any>(`http://localhost:3000/users/${userId}`).subscribe(u => this.user = u);
-    this.http.get<any[]>(`http://localhost:3000/avatares?userId=${userId}`).subscribe(data => this.avatar = data[0]);
+    this.http.get<any>(`https://fake-api-murex-one.vercel.app/users/${userId}`).subscribe(u => this.user = u);
+    this.http.get<any[]>(`https://fake-api-murex-one.vercel.app/avatares?userId=${userId}`).subscribe(data => this.avatar = data[0]);
 
-    this.http.get<any[]>(`http://localhost:3000/progresos?userId=${userId}`).subscribe(data => {
+    this.http.get<any[]>(`https://fake-api-murex-one.vercel.app/progresos?userId=${userId}`).subscribe(data => {
       const last = data[data.length - 1];
       this.progreso = last?.porcentajeCompletado;
       this.progresoCompleto = this.progreso === 100;
     });
 
-    this.http.get<any[]>(`http://localhost:3000/planesNutricionales?userId=${userId}`).subscribe(data => {
+    this.http.get<any[]>(`https://fake-api-murex-one.vercel.app/planesNutricionales?userId=${userId}`).subscribe(data => {
       const ultima = data[data.length - 1];
       this.ultimaComida = ultima?.comidas[ultima.comidas.length - 1];
     });
 
-    this.http.get<any[]>(`http://localhost:3000/retos`).subscribe(data => {
+    this.http.get<any[]>(`https://fake-api-murex-one.vercel.app/retos`).subscribe(data => {
       this.reto = data[Math.floor(Math.random() * data.length)];
     });
   }

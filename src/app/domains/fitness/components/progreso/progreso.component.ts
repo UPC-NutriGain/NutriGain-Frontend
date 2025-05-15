@@ -24,7 +24,7 @@ export class ProgresoComponent implements OnInit {
 
   ngOnInit(): void {
     const userId = 1;
-    this.http.get<any[]>(`http://localhost:3000/progresos?userId=${userId}`)
+    this.http.get<any[]>(`https://fake-api-murex-one.vercel.app/progresos?userId=${userId}`)
       .subscribe(progresos => {
         this.data = progresos.map(p => ({
           name: `Semana ${p.semana}`,

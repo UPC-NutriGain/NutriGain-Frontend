@@ -16,7 +16,7 @@ export class AvatarComponent implements OnInit {
 
   ngOnInit(): void {
     const userId = 1;
-    this.http.get<any[]>(`http://localhost:3000/avatares?userId=${userId}`)
+    this.http.get<any[]>(`https://fake-api-murex-one.vercel.app/avatares?userId=${userId}`)
       .subscribe(data => {
         if (data.length > 0) {
           this.avatar = data[0];

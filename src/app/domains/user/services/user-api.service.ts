@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class UserApiService {
-  private readonly apiUrl = 'http://localhost:3000/users';
+  private readonly apiUrl = 'https://fake-api-murex-one.vercel.app/users';
 
   constructor(private http: HttpClient) {}
 

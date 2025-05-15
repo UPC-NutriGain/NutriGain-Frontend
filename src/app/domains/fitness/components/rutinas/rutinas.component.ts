@@ -17,7 +17,7 @@ export class RutinasComponent implements OnInit {
 
   ngOnInit(): void {
     const userId = 1; // Temporal: simula al usuario logueado
-    this.http.get<any[]>(`http://localhost:3000/rutinas?userId=${userId}`).subscribe(data => {
+    this.http.get<any[]>(`https://fake-api-murex-one.vercel.app/rutinas?userId=${userId}`).subscribe(data => {
       this.rutinas = data;
     });
   }

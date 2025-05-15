@@ -16,7 +16,7 @@ export class FraseCardComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get<any[]>('http://localhost:3000/mensajesMotivacionales')
+    this.http.get<any[]>('https://fake-api-murex-one.vercel.app/mensajesMotivacionales')
       .subscribe(data => {
         const index = Math.floor(Math.random() * data.length);
         this.frase = data[index]?.texto;

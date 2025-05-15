@@ -17,7 +17,7 @@ export class NutricionComponent implements OnInit {
 
   ngOnInit(): void {
     const userId = 1; // simulado por ahora
-    this.http.get<any[]>(`http://localhost:3000/planesNutricionales?userId=${userId}`)
+    this.http.get<any[]>(`https://fake-api-murex-one.vercel.app/planesNutricionales?userId=${userId}`)
       .subscribe(data => {
         this.planes = data;
       });

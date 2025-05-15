@@ -21,7 +21,7 @@ export class RetoCardComponent implements OnInit {
   }
 
   obtenerReto(): void {
-    this.http.get<any[]>('http://localhost:3000/retos').subscribe(data => {
+    this.http.get<any[]>('https://fake-api-murex-one.vercel.app/retos').subscribe(data => {
       const index = Math.floor(Math.random() * data.length);
       this.reto = data[index];
     });
