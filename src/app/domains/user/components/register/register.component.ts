@@ -35,6 +35,7 @@ export class RegisterComponent {
       password: ['', Validators.required],
       edad: ['', [Validators.required, Validators.min(13)]],
       caminoSeleccionado: ['', Validators.required],
+      //esPremium: ['', Validators.required] //Usaremos esto al contar con el atributo de usuario "esPremium"
     });
   }
 
