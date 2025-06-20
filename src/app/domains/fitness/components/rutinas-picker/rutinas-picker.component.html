@@ -1,0 +1,15 @@
+<div class="rutinas-picker-wrapper">
+  <h1 class="titulo">Mis Rutinas</h1>
+  <div class="options-wrapper">
+    <button class="option-card" (click)="navigateToAutomaticPlan()">
+      <h2 class="option-title">Generar plan automáticamente</h2>
+      <img class="option-image" src="assets/routine/automatic.png" alt="Automático">
+    </button>
+    <h1 class="option-spacer">- o -</h1>
+    <button class="option-card" (click)="navigateToManualPlan()" disabled>
+      <h2 class="option-title">Crea tu propio plan</h2>
+      <img class="option-image" src="assets/routine/manual.png" alt="Manual">
+    </button>
+  </div>
+</div>
+<app-bottom-navbar></app-bottom-navbar>

@@ -27,6 +27,11 @@ export const routes: Routes = [
       import('./domains/fitness/components/rutinas/rutinas.component').then(m => m.RutinasComponent)
   },
   {
+    path: 'rutinas-picker',
+    loadComponent: () =>
+      import('./domains/fitness/components/rutinas-picker/rutinas-picker.component').then(m => m.RutinasPickerComponent)
+  },
+  {
     path: 'nutricion',
     loadComponent: () =>
       import('./domains/nutrition/components/nutricion/nutricion.component').then(m => m.NutricionComponent)
