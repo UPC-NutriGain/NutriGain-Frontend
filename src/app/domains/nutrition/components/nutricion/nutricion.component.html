@@ -1,0 +1,15 @@
+<div class="nutricion-wrapper">
+  <h2 class="titulo">Plan Nutricional</h2>
+
+  <div *ngFor="let plan of planes" class="plan-card">
+    <h3 class="dia">{{ plan.dia }}</h3>
+    <ul class="lista-comidas">
+      <li *ngFor="let comida of plan.comidas">
+        <span class="tipo">{{ comida.tipo }}:</span>
+        <span class="desc">{{ comida.descripcion }}</span>
+      </li>
+    </ul>
+  </div>
+
+  <app-bottom-navbar></app-bottom-navbar>
+</div>

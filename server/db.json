@@ -7,6 +7,22 @@
       "password": "123456",
       "edad": 19,
       "caminoSeleccionado": 1
+    },
+    {
+      "id": 2,
+      "nombre": "Laura Ramos",
+      "email": "laura@example.com",
+      "password": "abcdef",
+      "edad": 22,
+      "caminoSeleccionado": 2
+    },
+    {
+      "id": 3,
+      "nombre": "Carlos Díaz",
+      "email": "carlos@example.com",
+      "password": "pass789",
+      "edad": 28,
+      "caminoSeleccionado": 3
     }
   ],
   "fitnessPaths": [
@@ -38,6 +54,24 @@
         { "nombre": "Sentadillas", "repeticiones": "3x10" },
         { "nombre": "Press banca", "repeticiones": "3x8" }
       ]
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "dia": "Miércoles",
+      "ejercicios": [
+        { "nombre": "Peso muerto", "repeticiones": "4x6" },
+        { "nombre": "Dominadas", "repeticiones": "3x10" }
+      ]
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "dia": "Viernes",
+      "ejercicios": [
+        { "nombre": "Burpees", "repeticiones": "4x12" },
+        { "nombre": "Sprints", "repeticiones": "10x30m" }
+      ]
     }
   ],
   "progresos": [
@@ -45,8 +79,35 @@
       "userId": 1,
       "semana": 1,
       "nivel": 1,
-      "porcentajeCompletado": 25
+      "porcentajeCompletado": 25,
+      "pesoObjetivo": 68
+    },
+    {
+      "userId": 1,
+      "semana": 2,
+      "nivel": 2,
+      "porcentajeCompletado": 40,
+      "pesoObjetivo": 68
+    },
+    {
+      "userId": 2,
+      "semana": 1,
+      "nivel": 1,
+      "porcentajeCompletado": 30,
+      "pesoObjetivo": 60
     }
+  ],
+  "pesos": [
+    { "userId": 1, "semana": 1, "peso": 70 },
+    { "userId": 1, "semana": 2, "peso": 71.5 },
+    { "userId": 1, "semana": 3, "peso": 70.8 },
+    { "userId": 1, "semana": 4, "peso": 69.5 },
+    { "userId": 1, "semana": 5, "peso": 67.2 },
+    { "userId": 1, "semana": 6, "peso": 66.2 }
+  ],
+  "streaks": [
+    { "userId": 1, "diasSeguidos": 10, "ultimaFecha": "2025-05-14" },
+    { "userId": 2, "diasSeguidos": 5, "ultimaFecha": "2025-05-13" }
   ],
   "planesNutricionales": [
     {
@@ -58,6 +119,26 @@
         { "tipo": "Almuerzo", "descripcion": "Pechuga de pollo con arroz integral" },
         { "tipo": "Cena", "descripcion": "Ensalada con atún" }
       ]
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "dia": "Martes",
+      "comidas": [
+        { "tipo": "Desayuno", "descripcion": "Smoothie de frutas" },
+        { "tipo": "Almuerzo", "descripcion": "Ensalada con quinoa y huevo" },
+        { "tipo": "Cena", "descripcion": "Sopa de verduras" }
+      ]
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "dia": "Miercoles",
+      "comidas": [
+        { "tipo": "Desayuno", "descripcion": "Smoothie de frutas" },
+        { "tipo": "Almuerzo", "descripcion": "Ensalada con quinoa y huevo" },
+        { "tipo": "Cena", "descripcion": "Sopa de verduras" }
+      ]
     }
   ],
   "avatares": [
@@ -66,15 +147,26 @@
       "nivel": 1,
       "estadoAnimo": "Motivado",
       "imagen": "avatar1.png"
+    },
+    {
+      "userId": 2,
+      "nivel": 2,
+      "estadoAnimo": "Enérgica",
+      "imagen": "avatar2.png"
     }
   ],
   "mensajesMotivacionales": [
     { "id": 1, "texto": "¡Sigue así, estás rompiéndola!" },
-    { "id": 2, "texto": "Recuerda por qué comenzaste." }
+    { "id": 2, "texto": "Recuerda por qué comenzaste." },
+    { "id": 3, "texto": "Eres más fuerte de lo que crees." },
+    { "id": 4, "texto": "Cada paso cuenta, no te detengas." },
+    { "id": 5, "texto": "El esfuerzo de hoy es el logro de mañana." }
   ],
   "retos": [
     { "id": 1, "descripcion": "Haz 50 sentadillas hoy", "nivelDificultad": "Intermedio" },
-    { "id": 2, "descripcion": "Toma 2L de agua durante el día", "nivelDificultad": "Fácil" }
+    { "id": 2, "descripcion": "Toma 2L de agua durante el día", "nivelDificultad": "Fácil" },
+    { "id": 3, "descripcion": "30 minutos de cardio", "nivelDificultad": "Avanzado" },
+    { "id": 4, "descripcion": "10 minutos de meditación", "nivelDificultad": "Fácil" },
+    { "id": 5, "descripcion": "Haz 3 series de planchas", "nivelDificultad": "Intermedio" }
   ]
 }
-

@@ -1,0 +1,20 @@
+<mat-card class="main-card">
+  <h3 style="margin-bottom: 8px;">Bodyweight Progress</h3>
+
+  <div class="responsive-chart-container">
+    <ngx-charts-line-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="data"
+      [xAxis]="true"
+      [yAxis]="true"
+      [legend]="false"
+      [showXAxisLabel]="true"
+      [xAxisLabel]="'Semana'"
+      [showYAxisLabel]="true"
+      [yAxisLabel]="'Peso (kg)'"
+      [autoScale]="true"
+      [animations]="true">
+    </ngx-charts-line-chart>
+  </div>
+</mat-card>

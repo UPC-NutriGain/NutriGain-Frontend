@@ -1,0 +1,73 @@
+<div class="register-wrapper">
+  <mat-card class="register-card">
+    <h2>Regístrate en NutriGain</h2>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="nombre" type="text" />
+        <mat-error *ngIf="form.get('nombre')?.invalid && form.get('nombre')?.touched">
+          El nombre es obligatorio
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" type="email" />
+        <mat-error *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+          Ingresa un correo válido
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Contraseña</mat-label>
+        <input matInput formControlName="password" type="password" />
+        <mat-error *ngIf="form.get('password')?.invalid && form.get('password')?.touched">
+          La contraseña es obligatoria
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Edad</mat-label>
+        <input matInput formControlName="edad" type="number" min="12" max="100" />
+        <mat-error *ngIf="form.get('edad')?.invalid && form.get('edad')?.touched">
+          Edad válida requerida
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Camino Fitness</mat-label>
+        <mat-select formControlName="caminoSeleccionado">
+          <mat-option [value]="1">Musculación</mat-option>
+          <mat-option [value]="2">Agilidad</mat-option>
+          <mat-option [value]="3">Yoga</mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.get('caminoSeleccionado')?.invalid && form.get('caminoSeleccionado')?.touched">
+          Selecciona un camino
+        </mat-error>
+      </mat-form-field>
+
+<!--      <mat-form-field appearance="fill" class="full-width">-->
+<!--        <mat-label>Plan de suscripción</mat-label>-->
+<!--        <mat-select formControlName="esPremium">-->
+<!--          <mat-option [value]="false">Gratuito</mat-option>-->
+<!--          <mat-option [value]="true">Premium</mat-option>-->
+<!--        </mat-select>-->
+<!--        <mat-error *ngIf="form.get('esPremium')?.invalid && form.get('caminoSeleccionado')?.touched">-->
+<!--          Debes escoger un plan-->
+<!--        </mat-error>-->
+<!--      </mat-form-field>-->
+<!-- Usaremos esto al contar con el atributo de usuario "esPremium" -->
+
+      <button mat-raised-button color="primary" type="submit" class="full-width">
+        Crear cuenta
+      </button>
+
+      <button mat-stroked-button color="accent" class="full-width" (click)="irALogin()">
+        ¿Ya tienes cuenta? Inicia sesión
+      </button>
+
+      <p *ngIf="mensajeError" class="error-message">{{ mensajeError }}</p>
+    </form>
+  </mat-card>
+</div>
