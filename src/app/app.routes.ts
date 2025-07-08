@@ -16,7 +16,7 @@ export const routes: Routes = [
     path: 'manual', component: ManualPlanComponent,
   },
   {
-   path: 'detail/:id', component: MealDetailComponent
+    path: 'detail/:id', component: MealDetailComponent
   },
   {
     path: 'login',
