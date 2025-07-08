@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "https://fake-api-murex-one.vercel.app",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}
