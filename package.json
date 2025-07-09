@@ -11,7 +11,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "start:server": "json-server --watch server/db.json"
+    "start:server": "json-server --watch ../../Desktop/nutri/server/db.json"
 
   },
   "private": true,
